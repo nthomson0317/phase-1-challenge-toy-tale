@@ -47,15 +47,13 @@ newToyForm.addEventListener("submit", (event) =>
   
 
 function renderToy(toysArray) {
-  console.log(toysArray)
-  debugger;
     toysArray.forEach(toy => {
-      
+      console.log(toy)
      const cardDiv = document.createElement("div")
      cardDiv.className= ("card")
-      const h2 = document.createElement('h2');
-      h2.innerHTML = book.name;
-      toyCollection.append(h2);
+      cardDiv.textContent = toy["name"].value
+      console.log(cardDiv.textContent)
+      cardDiv.append(h2);
     });
   }
 
