@@ -29,14 +29,16 @@ function fetchAll () {
   
   
 
-let addToy = false; // boolean set at false
+
 
 document.addEventListener("DOMContentLoaded", () => {
   fetchAll()
 
+  
+
   const addBtn = document.querySelector("#new-toy-btn");
   const toyFormContainer = document.querySelector(".container");
-
+  let addToy = false; // boolean set at false
   addBtn.addEventListener("click", () => {
     // hide & seek with the form
     addToy = !addToy;
@@ -49,14 +51,14 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-//helper functions  
-function addNewToy(e){
-  e.preventDefault()
+// //helper functions  
+// function addNewToy(e){
+//   e.preventDefault()
   
-  const newPokemon ={
-    "name": e.target.whatUserTypes.value,
-    "url": e.target.urlUserTypes.value
- }
+//   const newPokemon ={
+//     "name": e.target.whatUserTypes.value,
+//     "url": e.target.urlUserTypes.value
+//  }
 
 
 function renderToy(toysArray) {
@@ -75,4 +77,4 @@ function renderToy(toysArray) {
     });
 
   }
-}
+
